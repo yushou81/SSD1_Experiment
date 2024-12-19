@@ -1,0 +1,214 @@
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 310). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox and floats are used as a fallback so that browsers which don't support grid will still recieve a similar layout.
+
+*/
+
+/* Base Styles */
+
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #fafafa;
+    color: #262626;
+    padding-bottom: 3rem;
+}
+.top{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 50px;
+    align-content: center;
+    /* align-items: center; */
+    /* align-self: center; */
+  }
+  .top .header-menu{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    /* margin-left: auto; */
+    cursor: pointer;
+  
+  
+  }
+  .menu-item:hover {
+    color: var(--logo-color);
+  }
+  .menu-item:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+    a {
+        color: #000;
+        text-decoration: none;
+      }
+      
+      .slider {
+        position: relative;
+        margin: 3rem auto;
+        width: 40rem;
+        height: 22rem;
+        box-shadow: 0 0.12rem 0.24rem #666;
+        border-radius: 0.2rem;
+      }
+      .slider .view {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+        overflow: hidden;
+      }
+      .slider .view a {
+        display: none;
+      }
+      .slider .view a:nth-child(1):target ~ img {
+        animation: slider1 6.6s ease infinite !important;
+      }
+      .slider .view a:nth-child(2):target ~ img {
+        animation: slider2 6.6s ease infinite !important;
+      }
+      .slider .view a:nth-child(3):target ~ img {
+        animation: slider3 6.6s ease infinite !important;
+      }
+      .slider .view img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        animation: slider 6.6s ease infinite;
+        transition: all 1.2s ease;
+      }
+      .slider .view img:nth-of-type(1) {
+        right: 0;
+        background: red;
+      }
+      .slider .view img:nth-of-type(2) {
+        right: 100%;
+        background: green;
+      }
+      .slider .view img:nth-of-type(3) {
+        right: 200%;
+        background: blue;
+      }
+      .slider .num {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+      }
+      .slider .num a {
+        display: inline-block;
+        width: 1.6rem;
+        height: 1.6rem;
+        text-align: center;
+        line-height: 1.6rem;
+        border-radius: 0;
+        background: rgba(255, 255, 255, 0.53);
+      }
+      .slider .num a:hover {
+        color: #000;
+        background: rgba(255, 255, 255, 0.83);
+      }
+      
+      /**
+       * 其实 slider 和 slider1 是相同的 animation 但是为了便与理解就 copy 了 slider ,
+       * slider1, slider2, slider3,分别为检索到相应图片是所要执行的 animation .
+       */
+      @keyframes slider {
+        0% {
+          transform: translateX(0);
+        }
+        16.5% {
+          transform: translateX(0);
+        }
+        33% {
+          transform: translateX(100%);
+        }
+        49.5% {
+          transform: translateX(100%);
+        }
+        66% {
+          transform: translateX(200%);
+        }
+        82.5% {
+          transform: translateX(200%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      @keyframes slider1 {
+        0% {
+          transform: translateX(0);
+        }
+        16.5% {
+          transform: translateX(0);
+        }
+        33% {
+          transform: translateX(100%);
+        }
+        49.5% {
+          transform: translateX(100%);
+        }
+        66% {
+          transform: translateX(200%);
+        }
+        82.5% {
+          transform: translateX(200%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      @keyframes slider2 {
+        0% {
+          transform: translateX(100%);
+        }
+        16.5% {
+          transform: translateX(100%);
+        }
+        33% {
+          transform: translateX(200%);
+        }
+        49.5% {
+          transform: translateX(200%);
+        }
+        66% {
+          transform: translateX(0);
+        }
+        82.5% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+      @keyframes slider3 {
+        0% {
+          transform: translateX(200%);
+        }
+        16.5% {
+          transform: translateX(200%);
+        }
+        33% {
+          transform: translateX(0);
+        }
+        49.5% {
+          transform: translateX(0);
+        }
+        66% {
+          transform: translateX(100%);
+        }
+        82.5% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(200%);
+        }
+      }

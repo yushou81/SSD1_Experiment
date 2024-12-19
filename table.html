@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日程表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .top{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 50px;
+    align-content: center;
+    /* align-items: center; */
+    /* align-self: center; */
+  }
+  .top .header-menu{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    /* margin-left: auto; */
+    cursor: pointer;
+  }
+  .top .header-menu a{
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  /* margin-left: auto; */
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+  .menu-item:hover {
+    color: var(--logo-color);
+  }
+  .menu-item:not(:last-child) {
+    margin-right: 20px;
+  }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .schedule {
+            display: table;
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .schedule th, .schedule td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .schedule th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        .schedule tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .schedule tr:hover {
+            background-color: #eaf5ea;
+        }
+
+        .time {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .subject {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="header-menu">
+         <div class="menu-item active"><a href="./index.html">主页</a></div>
+         <div class="menu-item"><a href="resume.html">个人风采</a></div>
+         <div class="menu-item notify"><a href="table.html">作息安排</a></div>
+        </div>
+        <div class="user-settings">
+         <!-- <img class="user-profile " src="./img/29dddf15ffea96c9141f26933b6fdae6.jpg" alt=""> -->
+        </div>
+    </div>
+    <h1>日程表</h1>
+    <table class="schedule">
+        <thead>
+            <tr>
+                <th>时间</th>
+                <th>星期一</th>
+                <th>星期二</th>
+                <th>星期三</th>
+                <th>星期四</th>
+                <th>星期五</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time">8:00 - 9:00</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+            </tr>
+            <tr>
+                <td class="time">9:00 - 10:00</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+            </tr>
+            <tr>
+                <td class="time">10:00 - 11:00</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+            </tr>
+            <tr>
+                <td class="time">11:00 - 12:00</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+                <td class="subject">睡觉</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
